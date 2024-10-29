@@ -1,0 +1,37 @@
+﻿@page
+@model SleekClothing.Pages.admin.IndexModel
+@{
+}
+
+<div class="container py-5">
+    <!-- En-tête principal -->
+    <div class="text-center mb-5">
+        <h1 class="display-4">Admin Dashboard</h1>
+        <p class="lead">Manage your store's products and categories with ease.</p>
+        <hr class="my-4 w-50 mx-auto">
+    </div>
+
+    <!-- Sections de gestion -->
+    <div class="row text-center">
+        <div class="col-md-6 mb-4">
+            <div class="card shadow-sm h-100">
+                <div class="card-body d-flex flex-column justify-content-center align-items-center">
+                    <i class="fas fa-box-open fa-3x mb-3 text-primary"></i>
+                    <h3 class="card-title">Manage Products</h3>
+                    <p class="card-text">Add, edit, or remove products from your store.</p>
+                    <a href="Management/products" class="btn btn-primary mt-3">Go to Products</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 mb-4">
+            <div class="card shadow-sm h-100">
+                <div class="card-body d-flex flex-column justify-content-center align-items-center">
+                    <i class="fas fa-tags fa-3x mb-3 text-success"></i>
+                    <h3 class="card-title">Manage Categories</h3>
+                    <p class="card-text">Organize your products into categories.</p>
+                    <a href="Management/categories" class="btn btn-success mt-3">Go to Categories</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

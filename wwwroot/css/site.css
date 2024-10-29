@@ -1,0 +1,124 @@
+html {
+    font-size: 14px;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    margin-bottom: 60px;
+}
+
+/* Custom CSS */
+
+/* Transition sur les boutons wishlist et comparateur */
+.card-buttons {
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+    transform: scale(0.8); /* Taille initiale réduite */
+}
+
+    .card-image:hover + .card-buttons,
+    .card-buttons:hover {
+        opacity: 1;
+        transform: scale(1); /* Passe à taille normale */
+    }
+
+/* Stylisation des cartes produits */
+.product-card {
+    border-radius: 1rem; /* Bords arrondis */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre légère */
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out; /* Effet au survol */
+}
+
+    .product-card:hover {
+        transform: translateY(-5px) scale(1.02); /* Légère translation et zoom au survol */
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Ombre plus prononcée */
+    }
+
+    .product-card img {
+        border-radius: 1rem; /* Arrondir l'image */
+    }
+
+    /* Boutons wishlist et comparateur */
+    .product-card .btn {
+        border-radius: 50%; /* Boutons ronds pour les icônes */
+        padding: 0.75rem;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Légère ombre sur les boutons */
+        transition: background-color 0.3s, transform 0.3s; /* Transition au survol */
+    }
+
+        .product-card .btn:hover {
+            background-color: rgba(255, 255, 255, 0.8); /* Fond blanc au survol */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ombre plus prononcée */
+        }
+
+        .product-card .btn i {
+            font-size: 1.2rem; /* Taille des icônes */
+        }
+
+/* Titre du produit */
+.card-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #333; /* Couleur du texte du titre */
+}
+
+/* Badge de réduction */
+.badge.bg-success {
+    font-size: 0.8rem; /* Taille du badge */
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+    background-color: #ffc107; /* Couleur jaune pour attirer l'attention */
+    color: #333;
+}
+
+/* Bouton ajouter au panier */
+.card-footer .btn {
+    background-color: #28a745; /* Couleur verte pour attirer l'attention */
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s, transform 0.3s; /* Transition au survol */
+}
+
+    .card-footer .btn:hover {
+        background-color: #218838; /* Couleur légèrement plus foncée au survol */
+        transform: scale(1.05); /* Agrandir légèrement le bouton au survol */
+    }
+
+/* Prix barré */
+.text-decoration-line-through {
+    color: #dc3545; /* Rouge pour le prix barré */
+    font-size: 0.9rem;
+}
+
+/* Prix après réduction */
+.fs-4 {
+    font-size: 1.5rem;
+    color: #28a745; /* Couleur verte pour le prix réduit */
+    font-weight: bold;
+}
+
+/* Espacement entre les lignes de produits */
+.row-cols-1 .col {
+    margin-bottom: 1.5rem;
+}
+
+/* Mise en page responsive pour les produits */
+@media (min-width: 992px) {
+    .row-cols-md-3 .col {
+        flex: 0 0 33.3333%; /* Pour avoir 3 colonnes en vue desktop */
+        max-width: 33.3333%;
+    }
+}

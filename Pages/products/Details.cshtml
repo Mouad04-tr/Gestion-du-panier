@@ -1,0 +1,22 @@
+﻿@page
+@model SleekClothing.Pages.products.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<br />
+<h1>@Model.Product.Name</h1>
+<img src="@Model.Product.ImageLocation" alt="@Model.Product.Name" height="300" />
+<div>
+    <hr />
+    <h4>Description</h4>
+    <p>@Model.Product.Description</p>
+    <br />
+    <h5>Category: <span class="fw-normal">@Model.Product.Category.Name</span></h5>
+
+    <br /><img src="~/assets/moul.jpeg" />
+    <div>
+        <a class="btn btn-primary" asp-page="./Index">Back to Products</a>
+    </div>
+</div>
